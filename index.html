@@ -36,7 +36,7 @@
 					/>
 				</div>
 				<!-- Menu Items -->
-				<div class="hidden space-x-6 md:flex">
+				<div class="hidden space-x-6 sm:flex">
 					<a
 						href="https://humanitarianstudies.org/"
 						class="text-darkBlue hover:text-red-500 font-semibold"
@@ -53,7 +53,7 @@
 				<!-- Hamburger Icon -->
 				<button
 					id="menu-btn"
-					class="block hamburger md:hidden focus:outline-none"
+					class="block hamburger sm:hidden focus:outline-none"
 				>
 					<span class="hamburger-top"></span>
 					<span class="hamburger-middle"></span>
@@ -81,16 +81,22 @@
 			</div>
 		</div>
 
-		<div class="bg-lightBlue py-12 px-4 md:px-0">
+		<div class="bg-lightBlue py-12 px-4 md:px-7">
 			<div class="flex justify-center">
-				<div class="bg-white shadow-sm h-[673px]">
+				<div class="bg-white shadow-sm min-h-[673px]">
 					<h3 class="text-darkBlue px-4 py-6 font-medium text-2xl md:text-4xl">
 						Send Your Registration
 					</h3>
-					<form action="" class="px-4 py-2">
+					<form
+						action=""
+						enctype="multipart/form-data"
+						class="px-4 py-2"
+						id="sendMailForm"
+					>
 						<div class="flex justify-around">
 							<div class="w-full">
 								<input
+									required
 									type="text"
 									class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
 									placeholder="First Name"
@@ -101,6 +107,7 @@
 							&nbsp;&nbsp;
 							<div class="w-full">
 								<input
+									required
 									type="text"
 									class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
 									placeholder="Last Name"
@@ -110,35 +117,82 @@
 							</div>
 						</div>
 						<input
+							required
 							type="number"
 							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
 							placeholder="Phone No."
-							name="phone"
-							id="phone"
+							name="from_phone"
+							id="from_phone"
 						/>
 						<input
+							required
 							type="email"
 							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
 							placeholder="Email Address"
-							name="email"
-							id="email"
+							name="from_email"
+							id="from_email"
 						/>
 						<input
+							required
+							type="text"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Your Country"
+							name="country"
+							id="country"
+						/>
+						<input
+							required
 							type="text"
 							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
 							placeholder="Business/Organization"
 							name="business_organization"
 							id="business_organization"
 						/>
+						<select
+							id="course_category"
+							name="course_category"
+							class="placeholder:italic pl-[14px] focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm"
+						>
+							<option>Certificate</option>
+							<option>Diploma</option>
+							<option>Post Graduate</option>
+						</select>
 						<textarea
+							required
 							id="course"
 							name="course"
 							placeholder="Course Applied For"
-							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[140px] rounded-sm bg-lightGray"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[120px] rounded-sm bg-lightGray"
 						></textarea>
+						<div
+							class="flex w-full h-screen items-center justify-center bg-grey-lighter py-4"
+						>
+							<label
+								class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white"
+							>
+								<svg
+									class="w-8 h-8"
+									fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+								>
+									<path
+										d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z"
+									/>
+								</svg>
+								<span class="mt-2 text-base leading-normal"
+									>Upload your CV</span
+								>
+								<input
+									type="file"
+									class="hidden"
+									name="course_cv"
+									id="course_cv"
+								/>
+							</label>
+						</div>
 						<button
-							type="button"
-							onclick="sendmail()"
+							type="submit"
 							class="px-4 py-4 w-full text-white text-center uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
 						>
 							Submit
