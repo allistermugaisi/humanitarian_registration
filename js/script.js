@@ -23,7 +23,7 @@ $(document).on('click', '#send-it', function () {
 			)
 		)
 			var d = 'whatsapp://send';
-		var g = d + '?phone=+254 707 840 294' + e + f;
+		var g = d + '?phone=+254 782 755 754' + e + f;
 		window.open(g, '_blank');
 	}
 }),
