@@ -88,13 +88,27 @@
 						Send Your Registration
 					</h3>
 					<form action="" class="px-4 py-2">
-						<input
-							type="text"
-							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
-							placeholder="Full Name"
-							name="fullname"
-							id="name"
-						/>
+						<div class="flex justify-around">
+							<div class="w-full">
+								<input
+									type="text"
+									class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+									placeholder="First Name"
+									name="first_name"
+									id="first_name"
+								/>
+							</div>
+							&nbsp;&nbsp;
+							<div class="w-full">
+								<input
+									type="text"
+									class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+									placeholder="Last Name"
+									name="last_name"
+									id="last_name"
+								/>
+							</div>
+						</div>
 						<input
 							type="number"
 							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
@@ -113,8 +127,8 @@
 							type="text"
 							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
 							placeholder="Business/Organization"
-							name="business"
-							id="business_name"
+							name="business_organization"
+							id="business_organization"
 						/>
 						<textarea
 							id="course"
@@ -255,7 +269,6 @@
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
-		<script type="text/javascript" src="./js/main.js"></script>
 		<script type="text/javascript" src="./js/script.js"></script>
 		<script type="text/javascript" src="./js/email.js"></script>
 	</body>
