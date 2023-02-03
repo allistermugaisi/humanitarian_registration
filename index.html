@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/contact.css" />
+
+		<!--========== BOX ICONS ==========-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- ============== Font awesome ============= -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+
+		<title>Humanitarian Studies</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="relative container mx-auto py-4 sm:py-0">
+			<!-- Flex container -->
+			<div class="flex items-center justify-around md:justify-between">
+				<!-- Logo -->
+				<div class="">
+					<!-- <a href="/" class="logo"></a> -->
+					<img
+						class="w-36 sm:w-72"
+						src="https://res.cloudinary.com/dgisuffs0/image/upload/v1675405059/Africa_Center_Logo_fn37le.png"
+						alt="humanitarian logo"
+					/>
+				</div>
+				<!-- Menu Items -->
+				<div class="hidden space-x-6 md:flex">
+					<a
+						href="https://humanitarianstudies.org/"
+						class="text-darkBlue hover:text-red-500 font-semibold"
+						>Home</a
+					>
+				</div>
+				<!-- Button -->
+				<a
+					href="https://humanitarianstudies.org/contact/"
+					class="hidden px-4 py-8 text-white uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
+					>Get Consultation</a
+				>
+
+				<!-- Hamburger Icon -->
+				<button
+					id="menu-btn"
+					class="block hamburger md:hidden focus:outline-none"
+				>
+					<span class="hamburger-top"></span>
+					<span class="hamburger-middle"></span>
+					<span class="hamburger-bottom"></span>
+				</button>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div class="md:hidden">
+				<div
+					id="menu"
+					class="z-[200] absolute rounded flex-col items-center hidden self-end text-white py-8 mt-4 space-y-6 font-bold bg-red-500 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+				>
+					<a href="https://humanitarianstudies.org/">Home</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="bg-darkBlue py-14 px-7 md:px-0">
+			<div class="container mx-auto">
+				<h2 class="text-white text-5xl">Registration Form</h2>
+				<p class="text-white font-light text-lg py-6 md:w-1/3">
+					Please feel free to get in touch with us. We'd love to hear for you.
+				</p>
+			</div>
+		</div>
+
+		<div class="container mx-auto my-12 px-4 md:px-0">
+			<div class="flex justify-center">
+				<div class="bg-white shadow-2xl h-[673px]">
+					<h3 class="text-darkBlue px-4 py-6 font-medium text-2xl md:text-4xl">
+						Send Your Registration
+					</h3>
+					<form action="" class="px-4 py-2">
+						<input
+							type="text"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Full Name"
+							name="fullname"
+							id="name"
+						/>
+						<input
+							type="number"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Phone No."
+							name="phone"
+							id="phone"
+						/>
+						<input
+							type="email"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Email Address"
+							name="email"
+							id="email"
+						/>
+						<input
+							type="text"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Business/Organization"
+							name="business"
+							id="business_name"
+						/>
+						<textarea
+							id="course"
+							name="course"
+							placeholder="Course Applied For"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[140px] rounded-sm bg-lightGray"
+						></textarea>
+						<button
+							type="button"
+							onclick="sendmail()"
+							class="px-4 py-4 w-full text-white text-center uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
+						>
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="bg-darkBlue py-14">
+			<div
+				class="container mx-auto bg-darkBlue px-3 py-8 flex items-center justify-center border-t-2 border-white"
+			>
+				<p class="text-sm text-white font-light">
+					Copyright &copy;
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
+					<span class="text-red">humanitarianstudies.org</span>. All Rights
+					Reserved.
+				</p>
+			</div>
+		</footer>
+
+		<!-- WhatsApp Widget -->
+		<div id="whatsapp-chat" class="hide">
+			<div class="header-chat">
+				<div class="head-home">
+					<div class="info-avatar">
+						<!-- <img
+							src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1651503055/Victoriavisaconsultants/logo_icon-1_gft6za.png"
+						/> -->
+					</div>
+					<p>
+						<span class="whatsapp-name">Humanitarianstudies</span><br /><small
+							>Typically replies within an hour</small
+						>
+					</p>
+				</div>
+				<div class="get-new hide">
+					<div id="get-label"></div>
+					<div id="get-nama"></div>
+				</div>
+			</div>
+			<div class="home-chat"></div>
+			<div class="start-chat">
+				<div
+					pattern="https://elfsight.com/assets/chats/patterns/whatsapp.png"
+					class="WhatsappChat__Component-sc-1wqac52-0 whatsapp-chat-body"
+				>
+					<div class="WhatsappChat__MessageContainer-sc-1wqac52-1 dAbFpq">
+						<div
+							style="opacity: 0"
+							class="WhatsappDots__Component-pks5bf-0 eJJEeC"
+						>
+							<div class="WhatsappDots__ComponentInner-pks5bf-1 hFENyl">
+								<div
+									class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotOne-pks5bf-3 ixsrax"
+								></div>
+								<div
+									class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"
+								></div>
+								<div
+									class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotThree-pks5bf-5 kXBtNt"
+								></div>
+							</div>
+						</div>
+						<div
+							style="opacity: 1"
+							class="WhatsappChat__Message-sc-1wqac52-4 kAZgZq"
+						>
+							<div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">
+								Our Agent
+							</div>
+							<div class="WhatsappChat__Text-sc-1wqac52-2 iSpIQi">
+								Hi there 👋<br /><br />How can I help you?
+							</div>
+							<div class="WhatsappChat__Time-sc-1wqac52-5 cqCDVm">1:40</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="blanter-msg">
+					<textarea
+						id="chat-input"
+						placeholder="Write a response"
+						maxlength="120"
+						row="1"
+					></textarea>
+					<a href="javascript:void;" id="send-it"
+						><svg viewBox="0 0 448 448">
+							<path
+								d="M.213 32L0 181.333 320 224 0 266.667.213 416 448 224z"
+							/></svg
+					></a>
+				</div>
+			</div>
+			<div id="get-number"></div>
+			<a class="close-chat" href="javascript:void">×</a>
+		</div>
+		<a class="blantershow-chat" href="javascript:void" title="Show Chat"
+			><svg width="20" viewBox="0 0 24 24">
+				<defs />
+				<path
+					fill="#eceff1"
+					d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"
+				/>
+				<path
+					fill="#4caf50"
+					d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"
+				/>
+				<path
+					fill="#fafafa"
+					d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"
+				/>
+			</svg>
+			Chat with Us</a
+		>
+
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script>
+		<script type="text/javascript" src="./js/email.js"></script>
+	</body>
+</html>
