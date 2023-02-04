@@ -14,45 +14,46 @@ if (sendMailForm.attachEvent) {
 function sendmail(e) {
 	e.preventDefault();
 
-	let firstName = document.getElementById('first_name').value;
-	let lastName = document.getElementById('last_name').value;
-	let userPhone = document.getElementById('from_phone').value;
-	let userEmail = document.getElementById('from_email').value;
-	let businessOrganization = document.getElementById(
-		'business_organization'
-	).value;
-	let courseCategory = document.getElementById('course_category').value;
-	let courseName = document.getElementById('course').value;
-	let country = document.getElementById('country').value;
-	let courseCV = document.getElementById('course_cv').files[0];
+	const data = new FormData(e.target);
+
+	const value = Object.fromEntries(data.entries());
 
 	const serviceID = 'service_0ppa9xp';
 	const templateID = 'template_0g7zfdn';
 
 	let contactParams = {
 		to_name: 'Humanitarian Studies',
-		from_name: `${firstName} ${lastName}`,
-		from_phone: userPhone,
-		from_email: userEmail,
-		business_organization: businessOrganization,
-		course: courseName,
-		course_category: courseCategory,
-		country: country,
-		course_cv: courseCV,
-		reply_to: userEmail,
+		from_name: `${value.first_name} ${value.last_name}`,
+		from_phone: value.from_phone,
+		from_email: value.from_email,
+		business_organization: value.business_organization,
+		course: value.course,
+		course_category: value.course_category,
+		country: value.country,
+		// course_cv: value.course_cv.name,
+		education_level: value.education_level,
+		// attachment: [
+		// 	{ data: '<html>i <i>hope</i> this works!</html>', alternative: true },
+		// 	{
+		// 		path: value.course_cv.webkitRelativePath,
+		// 		type: value.course_cv.type,
+		// 		name: value.course_cv.name,
+		// 	},
+		// ],
+		reply_to: value.from_email,
 	};
 	console.log(contactParams);
-	console.log(this);
+	// console.log(value.course_cv);
 
 	alert('Your message has been sent successfully');
 
-	emailjs.sendForm(serviceID, templateID, this).then(
-		function (res) {
-			console.log('SUCCESS!');
-			console.log(res);
-		},
-		function (error) {
-			console.log('FAILED...', error);
-		}
-	);
+	// emailjs.send(serviceID, templateID, contactParams).then(
+	// 	function (res) {
+	// 		console.log('SUCCESS!');
+	// 		console.log(res);
+	// 	},
+	// 	function (error) {
+	// 		console.log('FAILED...', error);
+	// 	}
+	// );
 }

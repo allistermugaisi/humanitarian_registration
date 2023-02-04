@@ -120,7 +120,7 @@
 							required
 							type="number"
 							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
-							placeholder="Phone No."
+							placeholder="+254 790 516 067"
 							name="from_phone"
 							id="from_phone"
 						/>
@@ -152,7 +152,9 @@
 							id="course_category"
 							name="course_category"
 							class="placeholder:italic pl-[14px] focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm"
+							required
 						>
+							<option selected hidden value="">Course Category</option>
 							<option>Certificate</option>
 							<option>Diploma</option>
 							<option>Post Graduate</option>
@@ -164,7 +166,15 @@
 							placeholder="Course Applied For"
 							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[120px] rounded-sm bg-lightGray"
 						></textarea>
-						<div
+						<input
+							required
+							type="text"
+							class="pl-[14px] py-2 focus:outline-none border border-gray-400 w-full mb-4 h-[55px] rounded-sm bg-lightGray"
+							placeholder="Level of Education"
+							name="education_level"
+							id="education_level"
+						/>
+						<!-- <div
 							class="flex w-full h-screen items-center justify-center bg-grey-lighter py-4"
 						>
 							<label
@@ -190,7 +200,7 @@
 									id="course_cv"
 								/>
 							</label>
-						</div>
+						</div> -->
 						<button
 							type="submit"
 							class="px-4 py-4 w-full text-white text-center uppercase tracking-normal bg-red-500 baseline hover:bg-darkBlue md:block ease-in duration-300"
@@ -323,6 +333,7 @@
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 		<script type="text/javascript" src="./js/script.js"></script>
 		<script type="text/javascript" src="./js/email.js"></script>
 	</body>
