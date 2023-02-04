@@ -42,18 +42,16 @@ function sendmail(e) {
 		// ],
 		reply_to: value.from_email,
 	};
-	console.log(contactParams);
-	// console.log(value.course_cv);
 
 	alert('Your message has been sent successfully');
 
-	// emailjs.send(serviceID, templateID, contactParams).then(
-	// 	function (res) {
-	// 		console.log('SUCCESS!');
-	// 		console.log(res);
-	// 	},
-	// 	function (error) {
-	// 		console.log('FAILED...', error);
-	// 	}
-	// );
+	emailjs.send(serviceID, templateID, contactParams).then(
+		function (res) {
+			console.log('SUCCESS!');
+			console.log(res);
+		},
+		function (error) {
+			console.log('FAILED...', error);
+		}
+	);
 }
