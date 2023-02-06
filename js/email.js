@@ -43,8 +43,6 @@ function sendmail(e) {
 		reply_to: value.from_email,
 	};
 
-	alert('Your message has been sent successfully');
-
 	emailjs.send(serviceID, templateID, contactParams).then(
 		function (res) {
 			console.log('SUCCESS!');
@@ -54,4 +52,6 @@ function sendmail(e) {
 			console.log('FAILED...', error);
 		}
 	);
+
+	alert('Your message has been sent successfully');
 }
