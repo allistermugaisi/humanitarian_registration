@@ -47,11 +47,10 @@ function sendmail(e) {
 		function (res) {
 			console.log('SUCCESS!');
 			console.log(res);
+			alert('Your message has been sent successfully');
 		},
 		function (error) {
 			console.log('FAILED...', error);
 		}
 	);
-
-	alert('Your message has been sent successfully');
 }
