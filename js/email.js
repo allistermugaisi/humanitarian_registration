@@ -42,12 +42,12 @@ function sendmail(e) {
 		// ],
 		reply_to: value.from_email,
 	};
+	alert('Your message has been sent successfully');
 
 	emailjs.send(serviceID, templateID, contactParams).then(
 		function (res) {
 			console.log('SUCCESS!');
 			console.log(res);
-			alert('Your message has been sent successfully');
 		},
 		function (error) {
 			console.log('FAILED...', error);
